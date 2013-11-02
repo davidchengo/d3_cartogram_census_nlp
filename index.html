@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>Mapping the Census, an OSU Hackathon project</title>
+<meta charset="utf-8">
+<script src="./js/natural.js"></script>
+<script src="./js/d3.v2.min.js"></script>
+<script src="./js/jquery-1.10.2.min.js"></script>
+<script src="./js/topojson.js"></script>
+<script src="./js/cartogram.js"></script>
+<script src="./js/colorbrewer.js"></script>
+<script src="./js/removeStopWords.js"></script>
+
+<link rel="stylesheet" type="text/css" href="cartogram.css">
+</head>
+<body>
+	<div id="search">
+		<form>
+			<input id="keywords" type="text" title="keywords to map"> <input
+				type="button" onclick="search()" value="guess">
+		</form>
+		<div id="match"></div>
+	</div>
+	<div id="container">
+		<h1>Mapping Big Census Data with Cartograms and NLP</h1>
+		<form>
+			<p>
+				<!-- These are the fields from the data table -->
+				<label>Scale by <select id="field"></select></label> <label>in
+					<!-- option to choose year. We don't need this --> <select
+					id="year" disabled="disabled">
+						<option value="2012">2012</option>
+				</select>
+				</label> <span id="status"></span>
+			</p>
+		</form>
+		<div id="map-container">
+			<img id="placeholder" alt="placeholder image for old browsers"
+				src="./placeholder.png">
+			<svg id="map"></svg>
+		</div>
+		<div id="about">
+			<h2>About</h2>
+			<p>
+				<a href="./cartogram.js">cartogram.js</a> is a JavaScript
+				implementation of <a
+					href="http://chrisman.scg.ulaval.ca/G360/dougenik.pdf">an
+					algoritm to construct continuous area cartograms</a>, by James A.
+				Dougenik, Nicholas R. Chrisman and Duane R. Niemeyer, ©1985 by the
+				Association of American Geographers. This example combines <a
+					href="http://github.com/mbostock/topojson">TopoJSON</a>-encoded
+				boundaries of the United States from <a
+					href="http://www.naturalearthdata.com/downloads/110m-cultural-vectors/">Natural
+					Earth</a> with <a
+					href="http://www.census.gov/popest/data/state/totals/2011/">2011
+					US Census population estimates</a> to size each state proportionally.
+			</p>
+
+			<p>
+				There’s also a <a class="hashish"
+					href="http://prag.ma/code/d3-cartogram/?segmentized">segmentized
+					topology</a>, which distorts the shapes more fluidly than the <a
+					class="hashish" href="http://prag.ma/code/d3-cartogram/?">original</a>.
+			</p>
+
+			<p>
+				Designed and built but <a href="http://stamen.com/studio/shawn">Shawn
+					Allen</a> at <a href="http://stamen.com/">Stamen</a>. <a
+					href="http://d3js.org/">d3.js</a> does most of the heavy lifting;
+				colors by <a href="http://colorbrewer2.org/">colorbrewer</a>.
+			</p>
+		</div>
+
+		<a href="https://github.com/shawnbot/d3-cartogram/"><img
+			style="position: absolute; top: 0; right: 0; border: 0;"
+			src="./forkme_right_gray_6d6d6d.png" alt="Fork me on GitHub"></a>
+	</div>
+
+	<script src="./js/main.js"></script>
+
+
+</body>
+</html>
