@@ -4,8 +4,6 @@ if (!document.createElementNS) {
 	document.getElementsByTagName("form")[0].style.display = "none";
 }
 
-// field definitions from:
-// <http://www.census.gov/popest/data/national/totals/2011/files/NST-EST2011-alldata.pdf>
 var percent = (function() {
 		var fmt = d3.format(".2f");
 		return function(n) {
