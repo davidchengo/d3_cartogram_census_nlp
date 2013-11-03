@@ -112,8 +112,8 @@ form {
 	font-size: 120%;
 }
 
-select {
-	font-size: inherit;
+#field {
+	width: 500px;
 }
 
 a {

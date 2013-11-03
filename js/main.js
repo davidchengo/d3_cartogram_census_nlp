@@ -78,7 +78,8 @@ window.onhashchange = function() {	//The hashchange event fires when a window's 
 };
 
 var segmentized = location.search === "?segmentized";		// false or true
-var url = [ "./data", segmentized ? "us-states-segmentized.topojson" : "us-states.topojson" ].join("/");		// ./data/us-states.topojson 
+var url = [ "./data", segmentized ? "us-states.topojson": "us-states-segmentized.topojson"  ].join("/");		
+// use us-states-segmentized.topojson
 //console.log(url);	
 
 // load and parse the topojson file
@@ -105,15 +106,18 @@ $(document).ready(function(){
 		
 		meta=meta.filter(function(d){
 			//console.log($.inArray(d.Description.split(";")[0], ["Estimate", "Percent"]));
-			return ($.inArray(d.Description.split(";")[0], ["Estimate", "Percent"])!=-1);
-				//&& d.Description.length<60;
+			return ($.inArray(d.Description.split(";")[0], ["Estimate", "Percent"])!=-1)
+					&& d.Description.length<150;
 		});
 		//console.log(meta);
 		metadata=meta;
 		meta.forEach(function(d){
 			//text_segment=d.Description.split(/[;-]+/);		// filter fields with only percent and estimate values
 			//log(text_segment)
-			var _description=d.Description.toLowerCase();
+			var _description=d.Description.toLowerCase()
+								.replace("estimate","esti.")
+								.replace("percent","perc.")
+								.replace(" - ","-");
 			var _field=d.Field;
 			var _category=d.Category;
 			fields.push({
@@ -136,7 +140,6 @@ $(document).ready(function(){
 			.map(fields);
 		
 		fieldSelect = d3.select("#field")
-			.style("width","475px")
 			.on("change", function(e) {
 				field = fields[this.selectedIndex];		// this is the current DOM select
 				//log(field);
