@@ -22,7 +22,7 @@ var years = [ 2012 ];		// we don't have year difference, all data in 2012
 var fieldsById={};
 var field = fields[0];	// initial field, no scale
 var year = years[0];	// initial year, 2010
-var colors = colorbrewer.RdYlBu[3]	// 3 colors
+var colors = colorbrewer.RdYlGn[3]	// 3 colors
 		.reverse().map(function(rgb) {
 			return d3.hsl(rgb);
 		});
@@ -48,8 +48,8 @@ yearSelect.selectAll("option").data(years).enter()
 
 var map = d3.select("#map");
 var zoom = d3.behavior.zoom()		//Constructs a new zoom behavior.
-		.translate([ -38, 32 ])
-		.scale(.94)
+		.translate([ -38, 10 ])
+		.scale(.92)
 		.scaleExtent([ 0.5, 10.0 ])
 		.on("zoom", updateZoom);
 var layer = map.append("g").attr("id", "layer");		// create a layer svg group
@@ -86,6 +86,20 @@ var metadata={};
 var tokenizer = new natural.WordTokenizer();;
 var scoreByWords=[];				//word scores updated each search
 var wordsByAllDescription=[];
+
+$("#fold").on("click",function(){
+	if(this.innerHTML=="&lt;&lt;&lt;"){
+		this.innerHTML="&gt;&gt;&gt;";
+		$("#search").hide("slow");
+		$("#container").css("left","5px");
+	}else{
+		this.innerHTML="&lt;&lt;&lt;";
+		$("#search").show("slow");
+		$("#container").css("left","500px");
+	}
+	
+});
+
 $(document).ready(function(){
 	d3.tsv("./data/meta.tsv", function(meta) {	// Category	Field	Description
 		
@@ -219,12 +233,14 @@ function search(){
 	// sort fields
 	fields.sort(function(a,b){
 		return b.score-a.score;		// <0, a comes first
-	})
+	});
 	//log(fields)
 	var multiselect=d3.select("#match");
-	multiselect.selectAll("div").remove();
+	$("#match").empty();
 	var _threshold=0.8;
 	if(fields[0].score>_threshold){
+		
+		$("#heading").show();
 		selectedFields=fields.splice(0,20);	//get top 5
 		d3.select("#match").selectAll("div")
 		.data(selectedFields)
@@ -241,18 +257,19 @@ function search(){
 			var i = $(this).index() ;
 			field = selectedFields[i];		// this is the current DOM select
 			location.hash = "#" + [ field.id, year ].join("/");		// #popest/2011, in our case it will be all #field/2012 
-		})
+		});
 	}else{
-		multiselect.selectAll("div")
-			.text("no match found")
+		$("#match")
+			.append("text")
+			.text("sorry no attribute match");
+		$("#heading").hide();
 	}
 	// add top 5 fields to the list
 }
 
+var path = d3.geo.path().projection(proj);
 function init() {
 	var features = carto.features(topology, geometries);		
-	var path = d3.geo.path().projection(proj);
-	
 	states = states.data(features).enter().append("path")		// draw states svg
 			.attr("class", "state").attr("id", function(d) {
 				return d.properties.NAME;
@@ -266,8 +283,6 @@ function reset() {
 	stat.text("");
 /*	body.classed("updating", false);*/
 	var features = carto.features(topology, geometries);
-	var path = d3.geo.path()
-			.projection(proj);
 	//log(states.data())
 	states.data(features).transition().duration(750).ease("linear").attr(
 			"fill", "#fafafa").attr("d", path);
@@ -324,10 +339,10 @@ function update() {
 
 	var delta = (Date.now() - start) / 1000;
 	stat.text([ "calculated in", delta.toFixed(1), "seconds" ].join(" "));
-	log(d3.select('#map').html);
-	if(d3.select('#map').html==""){
+	//log(d3.select('#map').html);
+/*	if(d3.select('#map').html==""){
 		d3.select('#map').html("no data");
-	}
+	}*/
 }
 
 var deferredUpdate = (function() {
@@ -354,7 +369,7 @@ function log(o){
 function parseHash() {
 	//alert(1)
 	var parts = location.hash.substr(1).split("/");
-	log(parts)
+	//log(parts)
 	var desiredFieldId = parts[0];
 	var desiredYear = +parts[1];
 	//log(parts);	//["none", "2011"]
@@ -388,6 +403,7 @@ function parseHash() {
 		});
 	}
 }
+
 
 Array.prototype.getUnique = function(){
 	   var u = {}, a = [];

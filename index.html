@@ -21,16 +21,16 @@
 <body>
 	<div id="search">
 		<div>Enter keyword to filter attributes (seperated by space)</div>
-		<form style="margin-bottom:5px; margin-top: 5px;">
+		<form style="margin-bottom:5px; margin-top: 5px;" >
 			<input id="keywords" type="text" title="enter keywords to filter attributes for mapping">
 			<input type="button" onclick="search()" value="guess">
 			<input id="sound" type="checkbox"> Match sound
 		</form>
-		<div>Score-&gt;lAttribute</div>
+		<div id="heading">Score-&gt;Attribute (Rank by similarity, up to 20)</div>
 		<div id="match"></div>
 	</div>
 	<div id="container">
-		<h1 id="title">Mapping the Census with Cartogram</h1>
+		<h1 id="title">TransMapper</h1>
 		<form>
 			<p>
 				<!-- These are the fields from the data table -->
@@ -39,18 +39,21 @@
 					id="year" disabled="disabled">
 						<option value="2012">2012</option>
 				</select>
-				</label> <span id="status"></span>
+				</label>
+				<br>
+				<a id="fold" title="Tablet, fold me to full screen">&gt;&gt;&gt;</a>
+				<span id="status" style="margin-top: 10px;"></span>
 			</p>
 		</form>
 		<div id="map-container">
-			<img id="placeholder" alt="placeholder image for old browsers"
-				src="./placeholder.png">
+			<!-- <img id="placeholder" alt="placeholder image for old browsers"
+				src="./placeholder.png"> -->
 			<svg id="map"></svg>
 		</div>
 		<div id="about">
 			<h2>About</h2>
 			<p>
-				<a href="./cartogram.js">cartogram.js</a> is a JavaScript
+				This project is a challenge <a href="./cartogram.js">cartogram.js</a> is a JavaScript
 				implementation of <a
 					href="http://chrisman.scg.ulaval.ca/G360/dougenik.pdf">an
 					algoritm to construct continuous area cartograms</a>, by James A.
