@@ -58,7 +58,7 @@ div.item:hover{
 #container {
 	left:5px;	
 	position: fixed;
-	width: 810px;
+	width: 840px;
 	margin: 15px auto;
 }
 
@@ -76,6 +76,11 @@ div.item:hover{
 	width: 100%;
 	height: 100%;
 	margin: 0;
+}
+
+#maptitle {
+	font-size: 120%;
+	font-family: sans-serif;
 }
 
 h2 {

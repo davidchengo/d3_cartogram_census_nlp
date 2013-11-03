@@ -24,7 +24,7 @@ var field = fields[0];	// initial field, no scale
 var year = years[0];	// initial year, 2010
 var colors = colorbrewer.BlindSafe[3]	// 3 colors
 		.reverse().map(function(rgb) {
-			return d3.hsl(rgb);
+			return rgb;		//d3.hsl(rgb);
 		});
 //log(colors)
 var keywordColors=colorbrewer.Greens[3]	// 3 colors
@@ -48,7 +48,7 @@ yearSelect.selectAll("option").data(years).enter()
 
 var map = d3.select("#map");
 var zoom = d3.behavior.zoom()		//Constructs a new zoom behavior.
-		.translate([ -38, 5 ])
+		.translate([ -20, 5 ])
 		.scale(.92)
 		.scaleExtent([ 0.5, 10.0 ])
 		.on("zoom", updateZoom);
@@ -118,7 +118,7 @@ $(document).ready(function(){
 								.replace("estimate","esti.")
 								.replace("percent","perc.")
 								.replace("percentage","perc.")
-								.replace(" - ","-");
+								.replace("/\s-\s/g","-");
 			var _field=d.Field;
 			var _category=d.Category;
 			fields.push({
@@ -292,7 +292,7 @@ function reset() {
 	var features = carto.features(topology, geometries);
 	//log(states.data())
 	states.data(features).transition()
-			.duration(750)
+			.duration(1500)
 			.ease("linear")
 			.attr("fill", "#fafafa").attr("d", path);
 
@@ -317,10 +317,16 @@ function update() {
 		.sort(d3.ascending);
 	var lo = values[0];
 	var hi = values[values.length - 1];
+	var mean=d3.mean(values).toFixed(2);
+	d3.select("#legend").selectAll("text")
+		.data([ lo, mean, hi ])
+		.text(function(d){
+			return fmt(d);
+		});
 	//log(values);
 	var color = d3.scale.linear()
 		.range(colors)
-		.domain( lo < 0 ? [ lo, 0, hi ] : [ lo, d3.mean(values), hi ]);
+		.domain( lo < 0 ? [ lo, 0, hi ] : [ lo, mean, hi ]);
 
 	// normalize the scale to positive numbers
 	var scale = d3.scale.linear()
@@ -339,10 +345,18 @@ function update() {
 	states.data(features).select("title").text(function(d) {
 		return [ d.properties.NAME, fmt(value(d)) ].join(": ");
 	});
-	
+	var _limit=110;
+	if(field.name.length<_limit){
+		$("#maptitle1").text("Title: "+field.name);
+		$("#maptitle2").text("");
+	}else{
+		$("#maptitle1").text("Title: "+field.name.substring(0, _limit));
+		$("#maptitle2").text(field.name.substring(_limit));
+	}
 	states.transition().duration(750)
 		.ease("linear")
 		.attr("fill", function(d) {
+			//log(color(value(d)));	
 			return color(value(d));
 		}).attr("d", carto.path);
 

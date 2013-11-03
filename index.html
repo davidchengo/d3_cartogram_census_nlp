@@ -47,33 +47,49 @@
 			</p>
 		</form>
 		<div id="map-container">
-			<svg id="map"></svg>
+			<svg id="map">
+				<text id="maptitle1" x="5" y="18">Title of The Map</text>
+				<text id="maptitle2" x="70" y="33"></text>
+				<g id="legend">
+				<rect x="710" y="410" width="20" height="20" style="fill: #91BFDB; opacity: 0.8;"></rect>
+				<text x="740" y="426">min</text>
+				<rect x="710" y="390" width="20" height="20" style="fill: #B5D4D1; opacity: 0.8;"></rect>
+				<rect x="710" y="370" width="20" height="20" style="fill: #DAE9C8; opacity: 0.8;"></rect>
+				<rect x="710" y="350" width="20" height="20" style="fill: #FFFFBF; opacity: 0.8;"></rect>
+				<text x="740" y="366">mean</text>
+				<rect x="710" y="330" width="20" height="20" style="fill: #FED99D; opacity: 0.8;"></rect>
+				<rect x="710" y="310" width="20" height="20" style="fill: #FDB37B; opacity: 0.8;"></rect>
+				<rect x="710" y="290" width="20" height="20" style="fill: #FC8D59; opacity: 0.8;"></rect>
+				<text x="740" y="306">max</text>
+				</g>
+			</svg>
+
 		</div>
 		<div id="about">
 			<p>
-				TransMapper, proudly as part of the <a href="library.osu.edu/find/hackathon/‎" target="_blank">OSUHackathon</a> challenge, 
-				is a light web-based application targeting on mapping 'big' census data.  
-				It is developed by team <i>GeoVis</i> using Javascript libraries:
+				TransMapper, as part of effort in the <a href="library.osu.edu/find/hackathon/‎" target="_blank">OSUHackathon</a> challenge, 
+				is a light web mapping application targeting 'big' census data.  
+				It is developed by team <i>GeoVis</i> using 6 Javascript libraries:
 				<a href="d3js.org">d3.v2.min.js</a>
 				, <a href="https://github.com/shawnbot/d3-cartogram/" target="_blank">cartogram.js</a>
 				, <a href="https://github.com/amitamb/NaturalJS" target="_blank">natural.js</a>
 				, <a href="https://github.com/mbostock/topojson" target="_blank">topojson.js</a>
 				, <a href="http://jquery.com/" target="_blank">jquery-1.10.2.min.js</a>
 				and <a href="https://github.com/mbostock/d3/tree/master/lib/colorbrewer" target="_blank">colorbrewer.js</a> within 25 hrs. 
-				See <a href="help.html" target="_blank">HackPage</a> for more details. 
-				Synopsis of census <a href="./meta.htm" target="_blank">data</a>
+				See our <a href="help.html" target="_blank">HackPage</a> for more details. 
+				Also, the synopsis of census <a href="./meta.htm" target="_blank">data</a>
 			</p>
-			<p>	TransMapper hopes to <i>transform</i> your way of <i>mapping</i> the census 
+			<p>	TransMapper aims to <i>transform</i> the way of <i>mapping</i> the census 
 				by providing a cartogram-based visualizer and 
 				a simple natural language interface for querying census data. 
-			</p>
-
-			<p> Based on previous work (shamelessly borrowed from 
+				Based on previous work (shamelessly borrowed from 
 			<a href="https://github.com/shawnbot/d3-cartogram/" target="_blank">d3-carto</a> 
 			by <a href="http://stamen.com/studio/shawn" target="_blank">Shawn Allen</a>),
 			TransMapper is designed and built by Wei Chen (David) <i>caption</i>, Bo Zhao (Jakob) and Xu Zhe (Lucky).
 			Long live <a href="d3js.org" >d3.js</a> which does most of the heavy lifting and 
-			<a href="colorbrewer2.org" target="_blank">colorbrewer</a> which makes map colors blind safe.
+			<a href="colorbrewer2.org" target="_blank">colorbrewer</a> which delivers blind safe colors for this mapping.
+			Also, thanks event sponsors <a href="http://library.osu.edu/find/hackathon/"  target="_blank">
+			Hortonworks, Teradata, Google, USG </a> for the opportunity and all the good food!
 			</p>
 		</div>
 
