@@ -44,7 +44,7 @@ var yearSelect = d3.select("#year").on("change", function(e) {
 
 yearSelect.selectAll("option").data(years).enter()
 	.append("option").attr("value", function(y) { return y;	})
-	.text(function(y) {	return y; })
+	.text(function(y) {	return y; });
 
 var map = d3.select("#map");
 var zoom = d3.behavior.zoom()		//Constructs a new zoom behavior.
@@ -174,11 +174,15 @@ function search(){
 				scoreByWords[w]=scoreByWords[w] || 0;
 				scoreByWords[w]=strSimilarityScore > scoreByWords[w]?strSimilarityScore :  scoreByWords[w];
 			}
-			var phoneSimilarityScore=natural.Metaphone.compare(kw,w);
-			if(phoneSimilarityScore){
-				scoreByWords[w]=scoreByWords[w] || 0;
-				scoreByWords[w]=phoneSimilarityScore > scoreByWords[w]?0.1 :  scoreByWords[w];
+			if(d3.select("#sound").checked){
+				log("calculate phonetic similarity");
+				var phoneSimilarityScore=natural.Metaphone.compare(kw,w);
+				if(phoneSimilarityScore){
+					scoreByWords[w]=scoreByWords[w] || 0;
+					scoreByWords[w]=phoneSimilarityScore > scoreByWords[w]?0.1 :  scoreByWords[w];
+				}	
 			}
+			
 		});
 	});
 /*	log(scoreByWords)
@@ -221,7 +225,7 @@ function search(){
 	multiselect.selectAll("div").remove();
 	var _threshold=0.8;
 	if(fields[0].score>_threshold){
-		selectedFields=fields.splice(0,10);	//get top 5
+		selectedFields=fields.splice(0,20);	//get top 5
 		d3.select("#match").selectAll("div")
 		.data(selectedFields)
 		.enter()
@@ -231,7 +235,7 @@ function search(){
 			return d.id;
 		})
 		.html(function(d){
-			return d.score.toFixed(1)+' '+d.descriptionHTML;
+			return d.score.toFixed(1)+'-&gt;'+d.descriptionHTML;
 		})
 		.on("click", function(e){
 			var i = $(this).index() ;
@@ -260,8 +264,7 @@ function init() {
 
 function reset() {
 	stat.text("");
-	body.classed("updating", false);
-	
+/*	body.classed("updating", false);*/
 	var features = carto.features(topology, geometries);
 	var path = d3.geo.path()
 			.projection(proj);
@@ -276,7 +279,6 @@ function reset() {
 
 function update() {
 	var start = Date.now();
-	body.classed("updating", true);
 	var key = field.key.replace("%d", year);	// we shouldn't specify the %d in the key so year becomes irrelevant
 	var fmt = (typeof field.format === "function") ? 
 			field.format : d3.format(field.format || ",");	// The comma (",") option enables the use of a comma for a thousands separator.
@@ -322,7 +324,10 @@ function update() {
 
 	var delta = (Date.now() - start) / 1000;
 	stat.text([ "calculated in", delta.toFixed(1), "seconds" ].join(" "));
-	body.classed("updating", false);
+	log(d3.select('#map').html);
+	if(d3.select('#map').html==""){
+		d3.select('#map').html("no data");
+	}
 }
 
 var deferredUpdate = (function() {
@@ -349,6 +354,7 @@ function log(o){
 function parseHash() {
 	//alert(1)
 	var parts = location.hash.substr(1).split("/");
+	log(parts)
 	var desiredFieldId = parts[0];
 	var desiredYear = +parts[1];
 	//log(parts);	//["none", "2011"]

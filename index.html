@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Mapping the Census with Cartogram</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta property="og:image" content="placeholder.png">
 <meta name="description" content="An OSU Hackathon project.">
 <meta name="keywords" content="U.S. Census, GIS, cartogram, NLP">
 <meta name="author" content="Wei Chen (Captain), Zhe Xu, Bo Zhao">
-<meta charset="UTF-8">
 <script src="./js/natural.js"></script>
 <script src="./js/d3.v2.min.js"></script>
 <script src="./js/jquery-1.10.2.min.js"></script>
@@ -14,15 +15,18 @@
 <script src="./js/cartogram.js"></script>
 <script src="./js/colorbrewer.js"></script>
 <script src="./js/removeStopWords.js"></script>
-
 <link rel="stylesheet" type="text/css" href="cartogram.css">
 </head>
+
 <body>
 	<div id="search">
-		<form>
-			<input id="keywords" type="text" title="keywords to map"> <input
-				type="button" onclick="search()" value="guess">
+		<div>Enter keyword to filter attributes (seperated by space)</div>
+		<form style="margin-bottom:5px; margin-top: 5px;">
+			<input id="keywords" type="text" title="enter keywords to filter attributes for mapping">
+			<input type="button" onclick="search()" value="guess">
+			<input id="sound" type="checkbox"> Match sound
 		</form>
+		<div>Score-&gt;lAttribute</div>
 		<div id="match"></div>
 	</div>
 	<div id="container">
