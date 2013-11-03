@@ -17,7 +17,7 @@ h1 {
 
 #search {
 	float: left;
-	top: 50px;
+	top: 40px;
 	left:5px;	
 	position: fixed;
 	width:460px;
@@ -32,13 +32,15 @@ input[type=text] {
 }
 
 #match {
-	height: 500px;
+	height: 420px;
 	overflow: auto;
 	text-align: left;	
+	margine-bottom: 50px;
 }
 #heading {
 	display:none;
 }
+
 div.item{
 	margin-bottom: 5px;
 	cursor: pointer;
@@ -46,6 +48,11 @@ div.item{
 
 div.item:hover{
 	background-color: gray;
+}
+
+#wordle {
+	position: relative;
+	bottom: -30px;	
 }
 
 #container {
@@ -106,10 +113,6 @@ path.state {
 
 path.state:hover {
 	stroke: #000;
-}
-
-form {
-	font-size: 120%;
 }
 
 #field {

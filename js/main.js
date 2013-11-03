@@ -22,7 +22,7 @@ var years = [ 2012 ];		// we don't have year difference, all data in 2012
 var fieldsById={};
 var field = fields[0];	// initial field, no scale
 var year = years[0];	// initial year, 2010
-var colors = colorbrewer.RdYlGn[3]	// 3 colors
+var colors = colorbrewer.BlindSafe[3]	// 3 colors
 		.reverse().map(function(rgb) {
 			return d3.hsl(rgb);
 		});
@@ -91,11 +91,11 @@ var wordsByAllDescription=[];
 $("#fold").on("click",function(){
 	if(this.innerHTML=="&lt;&lt;&lt;"){
 		this.innerHTML="&gt;&gt;&gt;";
-		$("#search").hide("slow");
+		$("#search").hide("fast");
 		$("#container").css("left","5px");
 	}else{
 		this.innerHTML="&lt;&lt;&lt;";
-		$("#search").show("slow");
+		$("#search").show("fast");
 		$("#container").css("left","500px");
 	}
 	
@@ -117,6 +117,7 @@ $(document).ready(function(){
 			var _description=d.Description.toLowerCase()
 								.replace("estimate","esti.")
 								.replace("percent","perc.")
+								.replace("percentage","perc.")
 								.replace(" - ","-");
 			var _field=d.Field;
 			var _category=d.Category;
