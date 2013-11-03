@@ -8,6 +8,6 @@ TransMapper aims to transform the way of mapping the census by providing a carto
 
 Based on previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram/), TransMapper is designed and built 
 
-by Wei Chen (David) caption, Bo Zhao (Jakob) and Xu Zhe (Lucky). 
+by Wei Chen (David) captain, Bo Zhao (Jakob) and Xu Zhe (Lucky). 
 
 d3.js does most of the heavy lifting and colorbrewer delivers blind safe colors for mapping. 
