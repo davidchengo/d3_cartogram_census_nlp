@@ -76,6 +76,12 @@ h2 {
 	margin: 0 0 5px 0;
 }
 
+#tooltip {
+	background-color: grey;
+	position: absolute;
+	color:white;
+}
+
 p {
 	margin: 0 0 10px;
 }

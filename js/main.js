@@ -48,7 +48,7 @@ yearSelect.selectAll("option").data(years).enter()
 
 var map = d3.select("#map");
 var zoom = d3.behavior.zoom()		//Constructs a new zoom behavior.
-		.translate([ -38, 10 ])
+		.translate([ -38, 5 ])
 		.scale(.92)
 		.scaleExtent([ 0.5, 10.0 ])
 		.on("zoom", updateZoom);
@@ -271,9 +271,12 @@ var path = d3.geo.path().projection(proj);
 function init() {
 	var features = carto.features(topology, geometries);		
 	states = states.data(features).enter().append("path")		// draw states svg
-			.attr("class", "state").attr("id", function(d) {
-				return d.properties.NAME;
-			}).attr("fill", "#fafafa").attr("d", path);
+		.attr("class", "state")
+		.attr("id", function(d) {
+			return d.properties.NAME;
+		})
+		.attr("fill", "#fafafa")
+		.attr("d", path);
 	states.append("title");
 	//log(states.data())
 	parseHash();
@@ -284,8 +287,10 @@ function reset() {
 /*	body.classed("updating", false);*/
 	var features = carto.features(topology, geometries);
 	//log(states.data())
-	states.data(features).transition().duration(750).ease("linear").attr(
-			"fill", "#fafafa").attr("d", path);
+	states.data(features).transition()
+			.duration(750)
+			.ease("linear")
+			.attr("fill", "#fafafa").attr("d", path);
 
 	states.select("title").text(function(d) {
 		return d.properties.NAME;
@@ -330,7 +335,7 @@ function update() {
 	states.data(features).select("title").text(function(d) {
 		return [ d.properties.NAME, fmt(value(d)) ].join(": ");
 	});
-
+	
 	states.transition().duration(750)
 		.ease("linear")
 		.attr("fill", function(d) {
@@ -339,6 +344,17 @@ function update() {
 
 	var delta = (Date.now() - start) / 1000;
 	stat.text([ "calculated in", delta.toFixed(1), "seconds" ].join(" "));
+	
+	$("#states").on('click', '*',function (e) { 	//jquery select all children of an element
+		var $this = $(this);
+		$('#tooltip').finish();
+		//log(e)
+		$('#tooltip')
+			.html($this.find("title").text())
+			.css("left", e.clientX)
+			.css("top", e.clientY)
+			.show().fadeOut(7000);
+	});
 	//log(d3.select('#map').html);
 /*	if(d3.select('#map').html==""){
 		d3.select('#map').html("no data");
