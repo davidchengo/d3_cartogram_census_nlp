@@ -1,7 +1,6 @@
 Category	Field	Description
 SOCIAL	SOCIAL-HC01_VC03	Estimate; HOUSEHOLDS BY TYPE - Total households
 SOCIAL	SOCIAL-HC02_VC03	Margin of Error; HOUSEHOLDS BY TYPE - Total households
-SOCIAL	SOCIAL-HC03_VC03	Percent; HOUSEHOLDS BY TYPE - Total households
 SOCIAL	SOCIAL-HC01_VC04	Estimate; HOUSEHOLDS BY TYPE - Family households (families)
 SOCIAL	SOCIAL-HC02_VC04	Margin of Error; HOUSEHOLDS BY TYPE - Family households (families)
 SOCIAL	SOCIAL-HC03_VC04	Percent; HOUSEHOLDS BY TYPE - Family households (families)

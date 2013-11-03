@@ -51,25 +51,25 @@ td
 	white-space:normal;}
 .xl66
 	{mso-style-parent:style0;
-	text-align:left;
-	background:yellow;
+	color:white;
+	font-weight:700;
+	text-align:center;
+	background:#0070C0;
 	mso-pattern:black none;
 	white-space:normal;}
 .xl67
 	{mso-style-parent:style0;
 	color:white;
 	font-weight:700;
+	mso-number-format:Fixed;
 	text-align:center;
 	background:#0070C0;
 	mso-pattern:black none;
 	white-space:normal;}
 .xl68
 	{mso-style-parent:style0;
-	color:white;
-	font-weight:700;
-	mso-number-format:Fixed;
-	text-align:center;
-	background:#0070C0;
+	text-align:left;
+	background:yellow;
 	mso-pattern:black none;
 	white-space:normal;}
 .xl69

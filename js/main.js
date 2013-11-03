@@ -181,6 +181,9 @@ $(document).ready(function(){
 
 
 function search(){
+	fields.forEach(function(d){		// reset all scores
+		d.score=0;
+	});
 	var keywords=$("#keywords").val().toLowerCase();
 	var tokensByKeywords=tokenizer.tokenize(keywords);
 	tokensByKeywords=tokensByKeywords.getUnique();
@@ -188,17 +191,18 @@ function search(){
 	wordsByAllDescription.forEach(function(w){
 		tokensByKeywords.forEach(function(kw){		//JaroWinklerDistance, [0,1], the large the better 0.9 is more robust
 			var strSimilarityScore=natural.JaroWinklerDistance(kw,w);
-			if(strSimilarityScore>0.8){
-				scoreByWords[w]=scoreByWords[w] || 0;
-				scoreByWords[w]=strSimilarityScore > scoreByWords[w]?strSimilarityScore :  scoreByWords[w];
-			}
-			if(d3.select("#sound").checked){
+			if(document.getElementById("sound").checked){
 				log("calculate phonetic similarity");
 				var phoneSimilarityScore=natural.Metaphone.compare(kw,w);
 				if(phoneSimilarityScore){
 					scoreByWords[w]=scoreByWords[w] || 0;
-					scoreByWords[w]=phoneSimilarityScore > scoreByWords[w]?0.1 :  scoreByWords[w];
+					scoreByWords[w]=phoneSimilarityScore > scoreByWords[w]?0.8 :  scoreByWords[w];
 				}	
+			}else{
+				if(strSimilarityScore>0.8){
+					scoreByWords[w]=scoreByWords[w] || 0;
+					scoreByWords[w]=strSimilarityScore > scoreByWords[w]?strSimilarityScore :  scoreByWords[w];
+				}
 			}
 			
 		});
@@ -232,20 +236,16 @@ function search(){
 		//log(d.score)
 	});
 	
-
-
 	// sort fields
 	fields.sort(function(a,b){
 		return b.score-a.score;		// <0, a comes first
 	});
 	//log(fields)
-	var multiselect=d3.select("#match");
 	$("#match").empty();
-	var _threshold=0.8;
+	var _threshold=0.79;
 	if(fields[0].score>_threshold){
-		
 		$("#heading").show();
-		selectedFields=fields.splice(0,20);	//get top 5
+		selectedFields=fields.slice(0,20);	//get top 5
 		d3.select("#match").selectAll("div")
 		.data(selectedFields)
 		.enter()

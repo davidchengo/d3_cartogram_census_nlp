@@ -11,7 +11,7 @@ body.updating {
 	background-color: black;
 }
 h1 {
-	font-size: 150%;
+	font-size: 160%;
 	margin: 0 0 5px 0;
 }
 
@@ -53,6 +53,7 @@ div.item:hover{
 #wordle {
 	position: relative;
 	bottom: -30px;	
+	cursor:pointer;
 }
 
 #container {
