@@ -11,3 +11,7 @@ Based on previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram
 by Wei Chen (David) captain, Xu Zhe (Lucky) and Bo Zhao (Jakob). 
 
 d3.js does most of the heavy lifting and colorbrewer delivers blind safe colors for mapping. 
+
+[TransMapper](http://www.cse.ohio-state.edu/~chewei/geovis/)
+[Wiki](http://www.cse.ohio-state.edu/~chewei/geovis/help.html)
+[Data Description](http://www.cse.ohio-state.edu/~chewei/geovis/meta.htm)
