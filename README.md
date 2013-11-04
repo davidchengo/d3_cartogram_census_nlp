@@ -1,4 +1,4 @@
-geovis
+TransMapper
 ======
 TransMapper is a light web mapping application targeting 'big' census data. 
 
@@ -12,6 +12,6 @@ by Wei Chen (David) captain, Xu Zhe (Lucky) and Bo Zhao (Jakob).
 
 d3.js does most of the heavy lifting and colorbrewer delivers blind safe colors for mapping. 
 
-[TransMapper](http://www.cse.ohio-state.edu/~chewei/demo/geovis/)
-[Wiki](http://www.cse.ohio-state.edu/~chewei/demo/geovis/help.html)
-[Data Description](http://www.cse.ohio-state.edu/~chewei/demo/geovis/meta.htm)
+[TransMapper](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/)
+[Wiki](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/help.html)
+[Data Description](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/meta.htm)
