@@ -12,6 +12,6 @@ by Wei Chen (David) captain, Xu Zhe (Lucky) and Bo Zhao (Jakob).
 
 d3.js does most of the heavy lifting and colorbrewer delivers blind safe colors for mapping. 
 
-[TransMapper](http://www.cse.ohio-state.edu/~chewei/geovis/)
-[Wiki](http://www.cse.ohio-state.edu/~chewei/geovis/help.html)
-[Data Description](http://www.cse.ohio-state.edu/~chewei/geovis/meta.htm)
+[TransMapper](http://www.cse.ohio-state.edu/~chewei/demo/geovis/)
+[Wiki](http://www.cse.ohio-state.edu/~chewei/demo/geovis/help.html)
+[Data Description](http://www.cse.ohio-state.edu/~chewei/demo/geovis/meta.htm)
