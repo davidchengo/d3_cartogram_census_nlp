@@ -1,5 +1,4 @@
 # TransMapper: Transform the way of Mapping census data<br/>
-![test image size](img/Hackathon-logo.jpg)
 <img src="img/Hackathon-logo.jpg" width="20%">
 
 <br/><br/>
@@ -26,7 +25,7 @@ Wordle of Words in Census Variable Names
 
 
 WIKI:<br/>
-[Help](https://github.com/davidchengo/geovis/blob/master/help.html)
+<a href="help.html" target="_blank">Help</a>
 <br/>
 [Data Description](https://github.com/davidchengo/geovis/blob/master/meta.htm)
 
