@@ -1,7 +1,5 @@
 # TransMapper: Transform the way of Mapping census data<br/>
 <img src="img/Hackathon-logo.jpg" width="20%">
-
-<br/><br/>
 # Description:<br/>
 TransMapper is a light weighted web mapping application focusing on visualizing numeric data using the cartogram map, a map on which statistical information is shown in diagrammatic form. The project was the project submitted to 2013 Ohio State Big Data Hackathon sponsored by Google, Hortonworks, Teradata and USG,. The project is conceived, planned, executed and developed in 24 hours.
 
@@ -26,8 +24,7 @@ Wordle of Words in Census Variable Names
 
 WIKI:<br/>
 <a href="help.html" target="_blank">Help</a>
-<br/>
-[Data Description](https://github.com/davidchengo/geovis/blob/master/meta.htm)
+<a href="meta.html" target="_blank">Data</a>
 
 
 Installation:<br/>
