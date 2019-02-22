@@ -24,18 +24,7 @@ by a team GeoVis using 6 Javascript libraries: d3.v2.min.js (for core visualizat
 Credits: 
 The core cartogram algorithm using d3.js was based on the previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram/). Project finished by three developers (David (myself), Lucky, and Jakob).
 
-![](geovis/img/Screenshot%202019-02-22%2010.32.51.png)
+![a](geovis/img/Screenshot%202019-02-22%2010.32.51.png)
 
-        
-      
-
-
-
-
-
-
-d3.js does most of the heavy lifting and colorbrewer . 
-
-[TransMapper](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/)
-[Wiki](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/help.html)
-[Data Description](http://www.cse.ohio-state.edu/~chewei/demo/transmapper/meta.htm)
+![a](https://github.com/davidchengo/geovis/img/Screenshot%202019-02-22%2010.32.51.png)
+     
