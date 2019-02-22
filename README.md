@@ -27,7 +27,6 @@ The core cartogram algorithm using d3.js was based on the previous work by [Shaw
 Preview:
 Census Data
 ![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
-![](geovis/blob/master/img/data.PNG?raw=true)
 
 
 
