@@ -26,8 +26,9 @@ The core cartogram algorithm using d3.js was based on the previous work by [Shaw
 
 ![a](geovis/img/Screenshot%202019-02-22%2010.32.51.png)
 ![a](https://github.com/davidchengo/geovis/img/Screenshot%202019-02-22%2010.32.51.png)
-![alt text](geovis/img/data.PNG)
-![alt text](https://github.com/davidchengo/geovis/img/data.PNG)
+![alt text](geovis/blob/master/img/data.PNG)
+![alt text](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
+
 
         
       
