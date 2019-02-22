@@ -1,5 +1,5 @@
 # TransMapper -- Transform the way of Mapping data<br/>
-![](https://github.com/davidchengo/geovis/blob/master/img/Hackathon-logo.jpg)
+![](https://github.com/davidchengo/geovis/blob/master/img/Hackathon-logo.jpg){ width=50% }
 
 <br/><br/>
 # Description:<br/>
