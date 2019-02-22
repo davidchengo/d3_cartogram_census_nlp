@@ -8,8 +8,8 @@ TransMapper is a light weighted web mapping application focusing on visualizing 
 ### Census Data<br/>
 ![](img/data.PNG)
 
-### Map View and NLP Search<br/>
-![](img/Screenshot%202019-02-22%2010.38.09.png)
+### Map View and NLP Search by Word Similarity<br/>
+![](img/Screenshot%202019-02-22%2010.34.54.png)
 
 ### Text Cloud of Words in Census Variable Names<br/>
 ![](img/tagcloud.PNG)
