@@ -6,19 +6,19 @@ TransMapper is a light weighted web mapping application focusing on visualizing 
 
 
 # Preview:<br/>
-Census Data
+Census Data<br/>
 ![](img/data.PNG)
 
-Example Cartogram
-![](img/example-carto.png)
+Map View and NLP Search<br/>
+![](img/Screenshot%202019-02-22%2010.38.09.png)
 
-Text Cloud of Words in Census Variable Names
+Text Cloud of Words in Census Variable Names<br/>
 ![](img/tagcloud.PNG)
 
-Wordle of Words in Census Variable Names
+Wordle of Words in Census Variable Names<br/>
 ![](img/wordle.PNG)
 
-Hackathon Result (3/30 in ranking)
+Hackathon Result (3/30 in ranking)<br/>
 ![](img/Screenshot%202019-02-22%2010.32.51.png)
 
 
