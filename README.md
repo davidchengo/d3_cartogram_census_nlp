@@ -1,17 +1,27 @@
 # TransMapper -- Transform the way of Mapping data<br/>
+![](https://github.com/davidchengo/geovis/blob/master/img/Hackathon-logo.jpg)
+
 <br/><br/>
-Description:<br/>
+# Description:<br/>
 TransMapper is a light weighted web mapping application focusing on visualizing numeric data using the cartogram map, a map on which statistical information is shown in diagrammatic form. The project was the project submitted to 2013 Ohio State Big Data Hackathon sponsored by Google, Hortonworks, Teradata and USG,. The project is conceived, planned, executed and developed in 24 hours.
 
 
-Preview:<br/>
+# Preview:<br/>
 Census Data
-
 ![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
 
 Example Cartogram
 ![](https://github.com/davidchengo/geovis/blob/master/img/example-carto.png)
 
+
+Example Cartogram
+![](https://github.com/davidchengo/geovis/blob/master/img/example-carto.png)
+
+Text Cloud of Words in Census Variable Names
+![](https://github.com/davidchengo/geovis/blob/master/img/tagcloud.PNG)
+
+Wordle of Words in Census Variable Names
+![](https://github.com/davidchengo/geovis/blob/master/img/wordle.PNG)
 
 
 WIKI:<br/>
