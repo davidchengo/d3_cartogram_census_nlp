@@ -18,7 +18,7 @@ Text Cloud of Words in Census Variable Names
 Wordle of Words in Census Variable Names
 ![](img/wordle.PNG)
 
-Hackathon Result: 3/30 in ranking
+Hackathon Result (3/30 in ranking)
 ![](img/Screenshot%202019-02-22%2010.32.51.png)
 
 
