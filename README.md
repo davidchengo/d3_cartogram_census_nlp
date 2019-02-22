@@ -1,8 +1,7 @@
 # TransMapper: Transform the way of Mapping census data<br/>
-![test image size](img/Hackathon-logo.jpg|width=59)
-![test image size](img/Hackathon-logo.jpg){:class="img-responsive"}
-![test image size](img/Hackathon-logo.jpg){:height="50%" width="50%"}
-![test image size](img/Hackathon-logo.jpgg){:height="700px" width="400px"}
+![test image size](img/Hackathon-logo.jpg)
+<img src="img/Hackathon-logo.jpg" width="40" height="79">
+
 <br/><br/>
 # Description:<br/>
 TransMapper is a light weighted web mapping application focusing on visualizing numeric data using the cartogram map, a map on which statistical information is shown in diagrammatic form. The project was the project submitted to 2013 Ohio State Big Data Hackathon sponsored by Google, Hortonworks, Teradata and USG,. The project is conceived, planned, executed and developed in 24 hours.
