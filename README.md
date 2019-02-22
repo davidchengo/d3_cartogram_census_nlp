@@ -7,26 +7,24 @@ TransMapper is a light weighted web mapping application focusing on visualizing 
 
 # Preview:<br/>
 Census Data
-![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
+![](img/data.PNG)
 
 Example Cartogram
-![](https://github.com/davidchengo/geovis/blob/master/img/example-carto.png)
-
-
-Example Cartogram
-![](https://github.com/davidchengo/geovis/blob/master/img/example-carto.png)
+![](img/example-carto.png)
 
 Text Cloud of Words in Census Variable Names
-![](https://github.com/davidchengo/geovis/blob/master/img/tagcloud.PNG)
+![](img/tagcloud.PNG)
 
 Wordle of Words in Census Variable Names
-![](https://github.com/davidchengo/geovis/blob/master/img/wordle.PNG)
+![](img/wordle.PNG)
+
+Hackathon Result: 3/30 in ranking
+![](img/Screenshot%202019-02-22%2010.32.51.png)
 
 
 WIKI:<br/>
-<a href="help.html" target="_blank">Help</a>
+<a href="help.html" target="_blank">Help</a><br/>
 <a href="meta.html" target="_blank">Data</a>
-
 
 Installation:<br/>
 The installation is simple. Download the entire repository onto your desk and double click on on the index.html to launch the web application. (Tested on all major browsers: Firefox, IE, Safari, and Chrome)
