@@ -1,6 +1,4 @@
-
-# TransMapper -- Transform the way of Mapping data
-
+# TransMapper -- Transform the way of Mapping data<br/>
 Description:<br/>
 TransMapper is a light weighted web mapping application focusing on visualizing numeric data using the cartogram map, a map on which statistical information is shown in diagrammatic form. The project was the project submitted to 2013 Ohio State Big Data Hackathon sponsored by Google, Hortonworks, Teradata and USG,. The project is conceived, planned, executed and developed in 24 hours. 
 <br/>
@@ -28,8 +26,3 @@ The core cartogram algorithm using d3.js was based on the previous work by [Shaw
 Preview:<br/>
 Census Data<br/>
 ![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
-
-
-
-        
-      
