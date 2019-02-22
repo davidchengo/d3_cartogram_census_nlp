@@ -25,6 +25,9 @@ Credits:
 The core cartogram algorithm using d3.js was based on the previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram/). Project finished by three developers (David (myself), Lucky, and Jakob).
 
 ![a](geovis/img/Screenshot%202019-02-22%2010.32.51.png)
-
 ![a](https://github.com/davidchengo/geovis/img/Screenshot%202019-02-22%2010.32.51.png)
-     
+![alt text](geovis/img/data.PNG)
+![alt text](https://github.com/davidchengo/geovis/img/data.PNG)
+
+        
+      
