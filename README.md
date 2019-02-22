@@ -1,6 +1,6 @@
 # TransMapper: Transform the way of Mapping census data<br/>
 ![test image size](img/Hackathon-logo.jpg)
-<img src="img/Hackathon-logo.jpg" width="40" height="79">
+<img src="img/Hackathon-logo.jpg" width="20%">
 
 <br/><br/>
 # Description:<br/>
