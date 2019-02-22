@@ -4,7 +4,17 @@ Description:<br/>
 TransMapper is a light weighted web mapping application focusing on visualizing numeric data using the cartogram map, a map on which statistical information is shown in diagrammatic form. The project was the project submitted to 2013 Ohio State Big Data Hackathon sponsored by Google, Hortonworks, Teradata and USG,. The project is conceived, planned, executed and developed in 24 hours.
 
 
-Table of Contents:<br/>
+Preview:<br/>
+Census Data
+
+![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
+
+Example Cartogram
+![](https://github.com/davidchengo/geovis/blob/master/img/example-carto.png)
+
+
+
+WIKI:<br/>
 [Help](https://github.com/davidchengo/geovis/blob/master/help.html)
 <br/>
 [Data Description](https://github.com/davidchengo/geovis/blob/master/meta.htm)
@@ -29,6 +39,4 @@ Credits:<br/>
 The core cartogram algorithm using d3.js was based on the previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram/). Project finished by three developers (David (myself), Lucky, and Jakob).
 
 
-Preview:<br/>
-Census Data<br/>
-![](https://github.com/davidchengo/geovis/blob/master/img/data.PNG)
+
