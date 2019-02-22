@@ -1,5 +1,5 @@
 # TransMapper -- Transform the way of Mapping data<br/>
-![test image size](geovis/blob/master/img/Hackathon-logo.jpg){:height="50%" width="50%"}
+![test image size](img/Hackathon-logo.jpg){:height="50%" width="50%"}
 
 <br/><br/>
 # Description:<br/>
