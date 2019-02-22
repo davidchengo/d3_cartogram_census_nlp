@@ -24,7 +24,7 @@ by a team GeoVis using 6 Javascript libraries: d3.v2.min.js (for core visualizat
 Credits: 
 The core cartogram algorithm using d3.js was based on the previous work by [Shawn Allen](https://github.com/shawnbot/d3-cartogram/). Project finished by three developers (David (myself), Lucky, and Jakob).
 
-![](geovis/img/Screenshot 2019-02-22 10.32.51.png)
+![](geovis/img/Screenshot%202019-02-22%2010.32.51.png)
 
         
       
