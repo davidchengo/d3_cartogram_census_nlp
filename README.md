@@ -1,5 +1,5 @@
 # TransMapper: Transform the way of Mapping census data<br/>
-![test image size](img/Hackathon-logo.jpg | width=100)
+![test image size](img/Hackathon-logo.jpg)
 
 <br/><br/>
 # Description:<br/>
